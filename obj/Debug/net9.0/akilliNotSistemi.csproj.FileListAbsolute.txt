@@ -1,0 +1,14 @@
+C:\Users\Şevval\source\repos\DotNetNot\akilliNotSistemi\bin\Debug\net9.0\akilliNotSistemi.exe
+C:\Users\Şevval\source\repos\DotNetNot\akilliNotSistemi\bin\Debug\net9.0\akilliNotSistemi.deps.json
+C:\Users\Şevval\source\repos\DotNetNot\akilliNotSistemi\bin\Debug\net9.0\akilliNotSistemi.runtimeconfig.json
+C:\Users\Şevval\source\repos\DotNetNot\akilliNotSistemi\bin\Debug\net9.0\akilliNotSistemi.dll
+C:\Users\Şevval\source\repos\DotNetNot\akilliNotSistemi\bin\Debug\net9.0\akilliNotSistemi.pdb
+C:\Users\Şevval\source\repos\DotNetNot\akilliNotSistemi\obj\Debug\net9.0\akilliNotSistemi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Şevval\source\repos\DotNetNot\akilliNotSistemi\obj\Debug\net9.0\akilliNotSistemi.AssemblyInfoInputs.cache
+C:\Users\Şevval\source\repos\DotNetNot\akilliNotSistemi\obj\Debug\net9.0\akilliNotSistemi.AssemblyInfo.cs
+C:\Users\Şevval\source\repos\DotNetNot\akilliNotSistemi\obj\Debug\net9.0\akilliNotSistemi.csproj.CoreCompileInputs.cache
+C:\Users\Şevval\source\repos\DotNetNot\akilliNotSistemi\obj\Debug\net9.0\akilliNotSistemi.dll
+C:\Users\Şevval\source\repos\DotNetNot\akilliNotSistemi\obj\Debug\net9.0\refint\akilliNotSistemi.dll
+C:\Users\Şevval\source\repos\DotNetNot\akilliNotSistemi\obj\Debug\net9.0\akilliNotSistemi.pdb
+C:\Users\Şevval\source\repos\DotNetNot\akilliNotSistemi\obj\Debug\net9.0\akilliNotSistemi.genruntimeconfig.cache
+C:\Users\Şevval\source\repos\DotNetNot\akilliNotSistemi\obj\Debug\net9.0\ref\akilliNotSistemi.dll
