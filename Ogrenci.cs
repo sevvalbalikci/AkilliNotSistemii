@@ -6,14 +6,23 @@ using System.Threading.Tasks;
 
 namespace akilliNotSistemi
 {
-    class Ogrenci
+    public class Ogrenci
     {
         public int Numara { get; set; }
         public string AdSoyad { get; set; }
-        public int Vize { get; set; }
-        public int Final { get; set; }
+        public int Sinif { get; set; }
 
-        public double Ortalama => Vize * 0.4 + Final * 0.6;
+        public List<Ders> Dersler { get; set; } = new List<Ders>();
+
+        public double Ortalama
+        {
+            get
+            {
+                if (Dersler.Count == 0) return 0;
+                return Dersler.Average(d => d.Ortalama);
+            }
+        }
+
         public bool GectiMi => Ortalama >= 50;
 
         public string HarfNotu
@@ -34,4 +43,3 @@ namespace akilliNotSistemi
         }
     }
 }
-

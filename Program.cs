@@ -1,6 +1,7 @@
 ﻿using akilliNotSistemi;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 class Program
 {
@@ -68,11 +69,11 @@ class Program
             Console.WriteLine("\nDevam etmek için 'P', Çıkış yapmak için 'R' tuşuna basınız.");
             secim = Console.ReadKey(true).KeyChar;
             secim = char.ToUpper(secim);
-            if (secim != 'P' & secim != 'R')
+            if (secim != 'P' && secim != 'R')
             {
                 Console.WriteLine("Lütfen sadece 'P' yada 'R' tuşuna basın!");
             }
-        } while (secim != 'P' & secim != 'R');
+        } while (secim != 'P' && secim != 'R');
 
         return secim;
     }
@@ -135,6 +136,16 @@ class Program
 
     static void OgrenciEkle()
     {
+        int secilenSinif = 0;
+        while (secilenSinif < 1 || secilenSinif > 4)
+        {
+            secilenSinif = SayiAl("Hangi sınıf öğrencileri eklenecek? (1-4): ");
+            if (secilenSinif < 1 || secilenSinif > 4)
+            {
+                Console.WriteLine("Lütfen 1 ile 4 arasında geçerli bir sınıf numarası girin.");
+            }
+        }
+
         int adet;
         do
         {
@@ -176,12 +187,15 @@ class Program
             ogrenciler.Add(new Ogrenci
             {
                 Numara = ogrenciNoSayaci++,
-                AdSoyad = tamAd
+                AdSoyad = tamAd,
+                Sinif = secilenSinif,
+                Dersler = new List<Ders>() // mutlaka başlat
             });
 
             Console.WriteLine("Öğrenci No: " + (ogrenciNoSayaci - 1) + " olarak eklendi.");
         }
     }
+
 
 
     static int NotAl(string mesaj)
@@ -239,14 +253,48 @@ class Program
 
         foreach (var ogr in ogrenciler)
         {
-            Console.WriteLine($"{ogr.AdSoyad} (Öğrenci No: {ogr.Numara}) öğrencisi için notları girin:");
+            Console.WriteLine(ogr.AdSoyad + " (Öğrenci No: " + ogr.Numara + ") öğrencisi için notları girin:");
 
-            ogr.Vize = NotAl("Vize (0-100): ");
-            ogr.Final = NotAl("Final (0-100): ");
+            int dersSayisi = SayiAl("Kaç ders için not girilecek? ");
+
+            for (int i = 1; i <= dersSayisi; i++)
+            {
+                string dersAdi = MetinAl(i + ". Dersin adını girin: ");
+
+                double vizeYuzde, finalYuzde;
+                while (true)
+                {
+                    vizeYuzde = SayiAl("Vize yüzdesini girin : ");
+                    finalYuzde = SayiAl("Final yüzdesini girin : ");
+
+                    if (vizeYuzde + finalYuzde == 100)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Hatalı giriş! Vize ve final yüzdelerinin toplamı 100 olmalıdır.");
+                    }
+                }
+
+                int vizeNot = NotAl("Vize notunu girin (0-100): ");
+                int finalNot = NotAl("Final notunu girin (0-100): ");
+
+                ogr.Dersler.Add(new Ders
+                {
+                    DersAdi = dersAdi,
+                    Vize = vizeNot,
+                    Final = finalNot,
+                    VizeYuzde = vizeYuzde / 100.0,
+                });
+
+                Console.WriteLine(dersAdi + " dersi başarıyla eklendi.\n");
+            }
         }
 
         Console.WriteLine("Not girişleri tamamlandı.");
     }
+
 
     static void OrtalamaHesapla()
     {
@@ -256,16 +304,16 @@ class Program
             return;
         }
 
-        bool notVar = ogrenciler.Any(o => o.Vize >= 0 && o.Final >= 0);
+        bool notVar = ogrenciler.Any(o => o.Dersler.Count > 0);
         if (!notVar)
         {
             Console.WriteLine("Notlar girilmemiş. Önce not girmeniz gerekmektedir.");
             return;
         }
 
-        // Ortalama ve geçme durumu zaten sınıf içerisinde otomatik hesaplanıyor.
         Console.WriteLine("Ortalamalar başarıyla hesaplandı.");
     }
+
 
 
     static void Listele()
@@ -292,26 +340,50 @@ class Program
 
     static void DersDurumuListele()
     {
-        if (ogrenciler.Count == 0)
-        {
-            Console.WriteLine("Henüz öğrenci yok.");
-            return;
-        }
-
         Console.WriteLine("\n--- DERS DURUMU ---");
-        Console.WriteLine("---------------------------------------------------------------------------------------------");
-        Console.WriteLine(String.Format("{0,-25} {1,-10} {2,-10} {3,-15} {4,-10} {5,-10}", "Ad Soyad", "Vize", "Final", "Ortalama", "Harf Notu", "Durum"));
-        Console.WriteLine("---------------------------------------------------------------------------------------------");
 
         foreach (var ogr in ogrenciler)
         {
-            string durum = ogr.GectiMi ? "Geçti" : "Kaldı";
-            Console.WriteLine(String.Format("{0,-25} {1,-10} {2,-10} {3,-15:F2} {4,-10} {5,-10}",
-                ogr.AdSoyad, ogr.Vize, ogr.Final, ogr.Ortalama, ogr.HarfNotu, durum));
-        }
+            Console.WriteLine($"\n{ogr.AdSoyad} (No: {ogr.Numara})");
 
-        Console.WriteLine("---------------------------------------------------------------------------------------------");
+            if (ogr.Dersler.Count == 0)
+            {
+                Console.WriteLine("  Henüz ders girilmemiş.");
+            }
+            else
+            {
+                Console.WriteLine("  --------------------------------------------------------------");
+                Console.WriteLine("  {0,-20} {1,-5} {2,-5} {3,-10} {4,-10} {5,-10}",
+                    "Ders Adı", "Vize", "Final", "Ortalama", "Harf", "Durum");
+
+                foreach (var ders in ogr.Dersler)
+                {
+                    string durum = ders.Ortalama >= 50 ? "Geçti" : "Kaldı";
+                    string harf = HarfNotuHesapla(ders.Ortalama);
+
+                    Console.WriteLine("  {0,-20} {1,-5} {2,-5} {3,-10:F2} {4,-10} {5,-10}",
+                        ders.DersAdi, ders.Vize, ders.Final, ders.Ortalama, harf, durum);
+                }
+
+                Console.WriteLine("  --------------------------------------------------------------");
+
+                Console.WriteLine($"  Genel Ortalama: {ogr.Ortalama:F2}");
+            }
+        }
     }
+    static string HarfNotuHesapla(double ort)
+    {
+        if (ort >= 90) return "AA";
+        else if (ort >= 85) return "BA";
+        else if (ort >= 80) return "BB";
+        else if (ort >= 75) return "CB";
+        else if (ort >= 70) return "CC";
+        else if (ort >= 65) return "DC";
+        else if (ort >= 60) return "DD";
+        else if (ort >= 50) return "FD";
+        else return "FF";
+    }
+
 
 
     static void OgrenciIslemleri()
@@ -378,30 +450,21 @@ class Program
             return;
         }
 
-        bool notVar = false;
-        foreach (var o in ogrenciler)
-        {
-            if (o.Vize >= 0 || o.Final >= 0)
-            {
-                notVar = true;
-                break;
-            }
-        }
+        bool notVar = ogrenciler.Any(o => o.Dersler.Count > 0);
         if (!notVar)
         {
-            Console.WriteLine("Henüz not girilmemiş öğrenci yok. Lütfen önce not girin.");
+            Console.WriteLine("Henüz not girilmemiş. Önce not girin.");
             return;
         }
 
-        Console.WriteLine("-Kayıtlı Öğrenciler-");
+        Console.WriteLine("- Kayıtlı Öğrenciler -");
         foreach (var o in ogrenciler)
         {
-            Console.WriteLine("Öğrenci Numarası: " + o.Numara + " " + o.AdSoyad);
+            Console.WriteLine($"Öğrenci No: {o.Numara} - {o.AdSoyad}");
         }
 
-        int ogrenciNumara = SayiAl("Notlarını düzenlemek istediğiniz öğrencinin numarasını girin: ");
-
-        var ogrenci = ogrenciler.Find(o => o.Numara == ogrenciNumara);
+        int no = SayiAl("Notlarını düzenlemek istediğiniz öğrencinin numarasını girin: ");
+        var ogrenci = ogrenciler.Find(o => o.Numara == no);
 
         if (ogrenci == null)
         {
@@ -409,11 +472,49 @@ class Program
             return;
         }
 
-        Console.WriteLine($"{ogrenci.AdSoyad} öğrencisi için mevcut notlar: Vize: {ogrenci.Vize}, Final: {ogrenci.Final}");
+        if (ogrenci.Dersler.Count == 0)
+        {
+            Console.WriteLine("Bu öğrenciye ait ders bulunmamaktadır.");
+            return;
+        }
 
-        ogrenci.Vize = NotAl("Yeni Vize Notunu Giriniz (0-100): ");
-        ogrenci.Final = NotAl("Yeni Final Notunu Giriniz (0-100): ");
+        Console.WriteLine($"\n{ogrenci.AdSoyad} öğrencisinin dersleri:");
 
-        Console.WriteLine("Notlar başarıyla güncellendi.");
+        for (int i = 0; i < ogrenci.Dersler.Count; i++)
+        {
+            var ders = ogrenci.Dersler[i];
+            Console.WriteLine($"{i + 1}. {ders.DersAdi} | Vize: {ders.Vize} | Final: {ders.Final} | Vize Yüzde: {ders.VizeYuzde * 100}%");
+        }
+
+        int secim = SayiAl("Hangi dersi düzenlemek istiyorsunuz? (Sıra numarası): ");
+        if (secim < 1 || secim > ogrenci.Dersler.Count)
+        {
+            Console.WriteLine("Geçersiz ders seçimi.");
+            return;
+        }
+
+        var secilenDers = ogrenci.Dersler[secim - 1];
+
+        int yeniVize = NotAl("Yeni Vize Notu (0-100): ");
+        int yeniFinal = NotAl("Yeni Final Notu (0-100): ");
+
+        double yeniVizeYuzde;
+        while (true)
+        {
+            yeniVizeYuzde = SayiAl("Yeni Vize Yüzdesi : ");
+            if (yeniVizeYuzde >= 0 && yeniVizeYuzde <= 100)
+            {
+                break;
+            }
+            Console.WriteLine("Geçersiz yüzde! 0-100 aralığında olmalı.");
+        }
+
+        secilenDers.Vize = yeniVize;
+        secilenDers.Final = yeniFinal;
+        secilenDers.VizeYuzde = yeniVizeYuzde / 100;
+
+        Console.WriteLine($"{secilenDers.DersAdi} dersi için notlar başarıyla güncellendi.");
     }
+
+
 }
