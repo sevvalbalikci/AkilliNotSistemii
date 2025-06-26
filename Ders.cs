@@ -12,10 +12,16 @@ namespace akilliNotSistemi
         public int Vize { get; set; }
         public int Final { get; set; }
         public double VizeYuzde { get; set; }
+        public double FinalYuzde { get; set; }
 
-        public double Ortalama => Vize * VizeYuzde + Final * (1 - VizeYuzde);
-
-
+        public double Ortalama
+        {
+            get
+            {
+                return Vize * VizeYuzde + Final * FinalYuzde;
+            }
+        }
     }
+
 }
 

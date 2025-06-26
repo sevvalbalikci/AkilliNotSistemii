@@ -1,0 +1,69 @@
+{
+  "1": [
+    {
+      "Numara": 10000,
+      "AdSoyad": "irem",
+      "Sinif": 1,
+      "Dersler": [],
+      "Ortalama": 0,
+      "GectiMi": false,
+      "HarfNotu": "FF"
+    },
+    {
+      "Numara": 10001,
+      "AdSoyad": "gizem",
+      "Sinif": 1,
+      "Dersler": [],
+      "Ortalama": 0,
+      "GectiMi": false,
+      "HarfNotu": "FF"
+    }
+  ],
+  "2": [
+    {
+      "Numara": 10002,
+      "AdSoyad": "gamze",
+      "Sinif": 2,
+      "Dersler": [],
+      "Ortalama": 0,
+      "GectiMi": false,
+      "HarfNotu": "FF"
+    },
+    {
+      "Numara": 10003,
+      "AdSoyad": "nur",
+      "Sinif": 2,
+      "Dersler": [],
+      "Ortalama": 0,
+      "GectiMi": false,
+      "HarfNotu": "FF"
+    },
+    {
+      "Numara": 10004,
+      "AdSoyad": "lale",
+      "Sinif": 2,
+      "Dersler": [],
+      "Ortalama": 0,
+      "GectiMi": false,
+      "HarfNotu": "FF"
+    },
+    {
+      "Numara": 10005,
+      "AdSoyad": "ali",
+      "Sinif": 2,
+      "Dersler": [],
+      "Ortalama": 0,
+      "GectiMi": false,
+      "HarfNotu": "FF"
+    },
+    {
+      "Numara": 10006,
+      "AdSoyad": "veli",
+      "Sinif": 2,
+      "Dersler": [],
+      "Ortalama": 0,
+      "GectiMi": false,
+      "HarfNotu": "FF"
+    }
+  ]
+}
