@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("akilliNotSistemi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+317211635fa9abb0842ec350c491f7ea26b25bae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21109af9d7e59f2d73c14ce0583a7b4abccaa262")]
 [assembly: System.Reflection.AssemblyProductAttribute("akilliNotSistemi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("akilliNotSistemi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

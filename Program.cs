@@ -183,17 +183,25 @@ class Program
         for (int i = 1; i <= adet; i++)
         {
             string tamAd = AdSoyadAl(i);
+            bool zatenVarMi = ogrenciler.Any(o => o.AdSoyad.ToLower() == tamAd.ToLower());
+            if (zatenVarMi)
+            {
+                Console.WriteLine("⚠️ Bu isimde bir öğrenci zaten var. Lütfen başka bir isim girin.");
+                i--;
+                continue;
+            }
 
             ogrenciler.Add(new Ogrenci
             {
                 Numara = ogrenciNoSayaci++,
                 AdSoyad = tamAd,
                 Sinif = secilenSinif,
-                Dersler = new List<Ders>() // mutlaka başlat
+                Dersler = new List<Ders>()
             });
 
             Console.WriteLine("Öğrenci No: " + (ogrenciNoSayaci - 1) + " olarak eklendi.");
         }
+
     }
 
 
