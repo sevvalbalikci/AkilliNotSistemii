@@ -14,6 +14,14 @@ class Program
     static void Main(string[] args)
     {
         OgrencileriYukle();
+
+        if (siniflaraGoreOgrenciler.Count > 0)
+        {
+            ogrenciNoSayaci = siniflaraGoreOgrenciler
+                .SelectMany(pair => pair.Value)
+                .Max(o => o.Numara) + 1;
+        }
+
         while (true)
         {
             Console.Clear();
@@ -77,7 +85,7 @@ class Program
 
         var ogrenciler = siniflaraGoreOgrenciler[secilenSinif];
 
-        int sayfaBoyutu = 5;
+        int sayfaBoyutu = 4;
         int toplamKayit = ogrenciler.Count;
         int toplamSayfa = (int)Math.Ceiling(toplamKayit / (double)sayfaBoyutu);
 
@@ -115,11 +123,16 @@ class Program
         if (File.Exists(dosyaYolu))
         {
             string json = File.ReadAllText(dosyaYolu);
-            var yuklenenOgrenciler = JsonSerializer.Deserialize<Dictionary<int, List<Ogrenci>>>(json);
+            siniflaraGoreOgrenciler = JsonSerializer.Deserialize<Dictionary<int, List<Ogrenci>>>(json);
+
             if (siniflaraGoreOgrenciler == null)
             {
                 siniflaraGoreOgrenciler = new Dictionary<int, List<Ogrenci>>();
             }
+        }
+        else
+        {
+            siniflaraGoreOgrenciler = new Dictionary<int, List<Ogrenci>>();
         }
     }
 
@@ -331,11 +344,20 @@ class Program
 
     static void NotGir()
     {
-        // Toplam öğrenci sayısı
-        int toplamOgrenci = siniflaraGoreOgrenciler.Values.Sum(l => l.Count);
-        if (toplamOgrenci == 0)
+        int secilenSinif = 0;
+
+        while (secilenSinif < 1 || secilenSinif > 4)
         {
-            Console.WriteLine("Henüz öğrenci eklenmedi. Lütfen önce öğrenci ekleyin.");
+            secilenSinif = SayiAl("Hangi sınıf öğrencilerinin notları eklenecek? (1-4): ");
+            if (secilenSinif < 1 || secilenSinif > 4)
+            {
+                Console.WriteLine("Lütfen 1 ile 4 arasında geçerli bir sınıf numarası girin.");
+            }
+        }
+
+        if (!siniflaraGoreOgrenciler.ContainsKey(secilenSinif) || siniflaraGoreOgrenciler[secilenSinif].Count == 0)
+        {
+            Console.WriteLine($"Seçilen {secilenSinif}. sınıfta henüz öğrenci bulunmamaktadır. Lütfen önce öğrenci ekleyin.");
             return;
         }
 
@@ -567,4 +589,3 @@ class Program
         OgrencileriKaydet();
     }
 }
-

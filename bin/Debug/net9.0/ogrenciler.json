@@ -1,38 +1,19 @@
 {
+  "2": [],
   "1": [
     {
-      "Numara": 10000,
-      "AdSoyad": "irem",
+      "Numara": 10001,
+      "AdSoyad": "veli",
       "Sinif": 1,
       "Dersler": [],
       "Ortalama": 0,
       "GectiMi": false,
       "HarfNotu": "FF"
     },
-    {
-      "Numara": 10001,
-      "AdSoyad": "gizem",
-      "Sinif": 1,
-      "Dersler": [],
-      "Ortalama": 0,
-      "GectiMi": false,
-      "HarfNotu": "FF"
-    }
-  ],
-  "2": [
     {
       "Numara": 10002,
-      "AdSoyad": "gamze",
-      "Sinif": 2,
-      "Dersler": [],
-      "Ortalama": 0,
-      "GectiMi": false,
-      "HarfNotu": "FF"
-    },
-    {
-      "Numara": 10003,
-      "AdSoyad": "nur",
-      "Sinif": 2,
+      "AdSoyad": "gizem",
+      "Sinif": 1,
       "Dersler": [],
       "Ortalama": 0,
       "GectiMi": false,
@@ -40,8 +21,8 @@
     },
     {
       "Numara": 10004,
-      "AdSoyad": "lale",
-      "Sinif": 2,
+      "AdSoyad": "g\u00FCl",
+      "Sinif": 1,
       "Dersler": [],
       "Ortalama": 0,
       "GectiMi": false,
@@ -49,8 +30,8 @@
     },
     {
       "Numara": 10005,
-      "AdSoyad": "ali",
-      "Sinif": 2,
+      "AdSoyad": "nur",
+      "Sinif": 1,
       "Dersler": [],
       "Ortalama": 0,
       "GectiMi": false,
@@ -58,8 +39,19 @@
     },
     {
       "Numara": 10006,
-      "AdSoyad": "veli",
-      "Sinif": 2,
+      "AdSoyad": "\u0131\u015F\u0131l",
+      "Sinif": 1,
+      "Dersler": [],
+      "Ortalama": 0,
+      "GectiMi": false,
+      "HarfNotu": "FF"
+    }
+  ],
+  "3": [
+    {
+      "Numara": 10007,
+      "AdSoyad": "murat",
+      "Sinif": 3,
       "Dersler": [],
       "Ortalama": 0,
       "GectiMi": false,
