@@ -13,3 +13,4 @@ C:\Users\Şevval\source\repos\DotNetNot\akilliNotSistemi\obj\Debug\net9.0\akilli
 C:\Users\Şevval\source\repos\DotNetNot\akilliNotSistemi\obj\Debug\net9.0\akilliNotSistemi.genruntimeconfig.cache
 C:\Users\Şevval\source\repos\DotNetNot\akilliNotSistemi\obj\Debug\net9.0\ref\akilliNotSistemi.dll
 C:\Users\Şevval\source\repos\DotNetNot\akilliNotSistemi\obj\Debug\net9.0\akilliNotSistemi.sourcelink.json
+C:\Users\Şevval\source\repos\DotNetNot\akilliNotSistemi\bin\Debug\net9.0\student.json

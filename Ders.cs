@@ -11,17 +11,37 @@ namespace akilliNotSistemi
         public string DersAdi { get; set; }
         public int Vize { get; set; }
         public int Final { get; set; }
-        public double VizeYuzde { get; set; }
+        public double VizeYuzde { get; set; } 
         public double FinalYuzde { get; set; }
 
         public double Ortalama
         {
             get
             {
-                return Vize * VizeYuzde + Final * FinalYuzde;
+                return (Vize * (VizeYuzde / 100.0)) + (Final * (FinalYuzde / 100.0));
+            }
+        }
+        public string HarfNotu
+        {
+            get
+            {
+                if (Ortalama >= 90) return "AA";
+                else if (Ortalama >= 85) return "BA";
+                else if (Ortalama >= 80) return "BB";
+                else if (Ortalama >= 75) return "CB";
+                else if (Ortalama >= 70) return "CC";
+                else if (Ortalama >= 65) return "DC";
+                else if (Ortalama >= 60) return "DD";
+                else if (Ortalama >= 50) return "FD"; 
+                else return "FF";
+            }
+        }
+        public string Durum
+        {
+            get
+            {
+                return Ortalama >= 50 ? "Geçti" : "Kaldı";
             }
         }
     }
-
 }
-

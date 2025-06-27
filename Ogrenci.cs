@@ -11,9 +11,8 @@ namespace akilliNotSistemi
         public int Numara { get; set; }
         public string AdSoyad { get; set; }
         public int Sinif { get; set; }
-
-        public List<Ders> Dersler { get; set; } = new List<Ders>();
-
+        public List<Ders> Dersler { get; set; }
+        
         public double Ortalama
         {
             get
