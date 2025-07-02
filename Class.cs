@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace akilliNotSistemi
 {
-    public class Ogrenci
+    public class Class
     {
-        public int Numara { get; set; }
-        public string AdSoyad { get; set; }
-        public int Sinif { get; set; }
+        public int classId { get; set; }
+        public string className { get; set; }
+        public int classLevel { get; set; }
     }
+
 }

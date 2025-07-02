@@ -4,16 +4,34 @@ using akilliNotSistemi;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 
 class Program
 {
-    static Dictionary<int, List<Ogrenci>> siniflaraGoreOgrenciler = new Dictionary<int, List<Ogrenci>>();
-    static string dosyaYolu = "student.json";
+    private static Dictionary<int, List<Ogrenci2>> siniflaraGoreOgrenciler;
+    // Proje kök dizinine git
+    static readonly string projeDizini = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
+
+    // Dosya yollarını proje kök dizininden al
+    static readonly string dosyaYolu = Path.Combine(projeDizini, "student.json");
+    static readonly string classesDosyaYolu = Path.Combine(projeDizini, "classes.json");
+    static readonly string dersDosyaYolu = Path.Combine(projeDizini, "student_courses.json");
     static int ogrenciNoSayaci = 10000;
+    static List<DersBilgisi> dersBilgileri = new List<DersBilgisi>();
+    public static List<Ogrenci2> tumOgrenciler2;
+    public static List<Ogrenci> tumOgrenciler;
+    static string ogrenciDosyaYolu = Path.Combine(projeDizini, "eklenen_ogrenciler.json");
+    static List<Ogrenci2> yeniEklenenOgrenciler = new List<Ogrenci2>();
+
 
     static void Main(string[] args)
     {
         OgrencileriYukle();
+        
+        DersVerileriniYukleVeAta();
+        DersBilgileriniYukle();
+        JsondanOgrencileriYukle();
+
 
         var tumOgrenciler = siniflaraGoreOgrenciler.Values.SelectMany(listOgrenci => listOgrenci);
 
@@ -33,12 +51,14 @@ class Program
             Console.Clear();
             Console.WriteLine("---AKILLI NOT SİSTEMİ---");
             Console.WriteLine("1 - Öğrenci ekle");
-            Console.WriteLine("2 - Notları Gir");
-            Console.WriteLine("3 - Ortalama Hesapla");
-            Console.WriteLine("4 - Öğrencileri Listele");
-            Console.WriteLine("5 - Öğrencilerin Ders Durumları");
-            Console.WriteLine("6 - Öğrenci Silme / Not Düzenleme");
-            Console.WriteLine("7 - Çıkış");
+            Console.WriteLine("2 - Ders Ekle");
+            Console.WriteLine("3 - Notları Gir");
+            Console.WriteLine("4 - Ortalama Hesapla");
+            Console.WriteLine("5 - Öğrencileri Listele");
+            Console.WriteLine("6 - Öğrencilerin Ders Durumları");
+            Console.WriteLine("7 - Öğrenci Silme / Not Düzenleme");
+            Console.WriteLine("8 - Öğrenci Dersleri Listele");
+            Console.WriteLine("9 - Çıkış");
 
             Console.Write("Seçiminiz : ");
             string secim = Console.ReadLine();
@@ -49,21 +69,28 @@ class Program
                     OgrenciEkle();
                     break;
                 case "2":
-                    NotGir();
+                    DersTanimiEkle();
                     break;
                 case "3":
-                    OrtalamaHesapla();
+                    NotGir();
                     break;
                 case "4":
-                    ListeleSayfali();
+                    OrtalamaHesapla();
                     break;
                 case "5":
-                    DersDurumuListele();
+                    ListeleSayfali();
                     break;
                 case "6":
-                    OgrenciIslemleri();
+                    DersDurumuListele();
                     break;
                 case "7":
+                    OgrenciIslemleri();
+                    break;
+                case "8":
+                    OgrenciDersleriniListele();
+                    break;
+
+                case "9":
                     return;
                 default:
                     Console.WriteLine("Geçersiz seçim!");
@@ -76,6 +103,49 @@ class Program
                 Console.WriteLine("Programdan çıkılıyor...");
                 break;
             }
+        }
+
+        static void JsondanOgrencileriYukle()
+        {
+            try
+            {
+                string json = File.ReadAllText("student.json"); 
+
+                if (!string.IsNullOrWhiteSpace(json))
+                {
+                    siniflaraGoreOgrenciler = JsonSerializer.Deserialize<Dictionary<int, List<Ogrenci2>>>(json);
+                }
+                else
+                {
+                    siniflaraGoreOgrenciler = new Dictionary<int, List<Ogrenci2>>();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ders bilgileri dosyasını okurken hata oluştu: " + ex.Message);
+            }
+        }
+    }
+
+    static void DersBilgileriniYukle()
+    {
+        if (File.Exists(dersDosyaYolu))
+        {
+            string json = File.ReadAllText(dersDosyaYolu);
+            try
+            {
+                dersBilgileri = System.Text.Json.JsonSerializer.Deserialize<List<DersBilgisi>>(json);
+            }
+            catch (System.Text.Json.JsonException ex)
+            {
+                Console.WriteLine($"Ders bilgileri dosyasını okurken hata oluştu: {ex.Message}");
+                dersBilgileri = new List<DersBilgisi>();
+            }
+        }
+        else
+        {
+            Console.WriteLine("Ders bilgileri dosyası bulunamadı. Boş ders bilgileri listesi oluşturuldu.");
+            dersBilgileri = new List<DersBilgisi>();
         }
     }
 
@@ -140,6 +210,69 @@ class Program
         File.WriteAllText(dosyaYolu, json);
     }
 
+    static void YeniEklenenleriJsonaKaydet()
+    {
+        try
+        {
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string jsonString = JsonSerializer.Serialize(yeniEklenenOgrenciler, options);
+
+            File.WriteAllText("eklenen_ogrenciler.json", jsonString);
+            Console.WriteLine("Yeni eklenen öğrenciler dosyaya kaydedildi.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Yeni öğrencileri yazarken hata: " + ex.Message);
+        }
+    }
+
+    static void DersVerileriniYukleVeAta()
+    {
+        try
+        {
+            if (!File.Exists("student_courses.json"))
+            {
+                Console.WriteLine("student_courses.json dosyası bulunamadı!");
+                return;
+            }
+
+            string json = File.ReadAllText("student_courses.json");
+
+            if (string.IsNullOrWhiteSpace(json))
+            {
+                Console.WriteLine("student_courses.json dosyası boş!");
+                return;
+            }
+
+            var ogrenciDersleri = JsonSerializer.Deserialize<Dictionary<string, List<Ders>>>(json);
+
+            if (ogrenciDersleri == null)
+            {
+                Console.WriteLine("Ders verileri boş döndü.");
+                return;
+            }
+
+            foreach (var sinifKvp in siniflaraGoreOgrenciler)
+            {
+                foreach (var ogrenci in sinifKvp.Value)
+                {
+                    string numaraStr = ogrenci.Numara.ToString();
+
+                    if (ogrenciDersleri.ContainsKey(numaraStr))
+                        ogrenci.Dersler = ogrenciDersleri[numaraStr];
+                    else
+                        ogrenci.Dersler = new List<Ders>();
+                }
+            }
+
+            Console.WriteLine("Ders verileri başarıyla yüklendi ve öğrencilere atandı.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Ders verileri yüklenirken hata oluştu: " + ex.Message);
+        }
+    }
+
     static void OgrencileriYukle()
     {
         if (File.Exists(dosyaYolu))
@@ -147,14 +280,14 @@ class Program
             try
             {
                 string json = File.ReadAllText(dosyaYolu);
-                var tempDict = JsonSerializer.Deserialize<Dictionary<string, List<Ogrenci>>>(json);
+                var tempDict = JsonSerializer.Deserialize<Dictionary<string, List<Ogrenci2>>>(json);
 
                 if (tempDict != null)
                 {
-                    siniflaraGoreOgrenciler = new Dictionary<int, List<Ogrenci>>(); // Mevcut dictionary'yi temizle
+                    siniflaraGoreOgrenciler = new Dictionary<int, List<Ogrenci2>>(); // Mevcut dictionary'yi temizle
                     for (int i = 1; i <= 4; i++) // 1'den 4'e kadar sınıfları ekle
                     {
-                        siniflaraGoreOgrenciler.Add(i, new List<Ogrenci>());
+                        siniflaraGoreOgrenciler.Add(i, new List<Ogrenci2>());
                     }
 
                     foreach (var kvp in tempDict)
@@ -180,10 +313,10 @@ class Program
                 }
                 else
                 {
-                    siniflaraGoreOgrenciler = new Dictionary<int, List<Ogrenci>>();
+                    siniflaraGoreOgrenciler = new Dictionary<int, List<Ogrenci2>>();
                     for (int i = 1; i <= 4; i++) // JSON boşsa da sınıfları doldur
                     {
-                        siniflaraGoreOgrenciler.Add(i, new List<Ogrenci>());
+                        siniflaraGoreOgrenciler.Add(i, new List<Ogrenci2>());
                     }
                     Console.WriteLine("JSON dosyası boş veya hatalı formatta. Boş öğrenci listesi oluşturuldu.");
                 }
@@ -191,34 +324,34 @@ class Program
             catch (JsonException ex)
             {
                 Console.WriteLine($"JSON okuma veya ayrıştırma hatası: {ex.Message}");
-                siniflaraGoreOgrenciler = new Dictionary<int, List<Ogrenci>>();
+                siniflaraGoreOgrenciler = new Dictionary<int, List<Ogrenci2>>();
                 for (int i = 1; i <= 4; i++) // Hata durumunda da sınıfları doldur
                 {
-                    siniflaraGoreOgrenciler.Add(i, new List<Ogrenci>());
+                    siniflaraGoreOgrenciler.Add(i, new List<Ogrenci2>());
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Dosya yüklenirken beklenmeyen bir hata oluştu: {ex.Message}");
-                siniflaraGoreOgrenciler = new Dictionary<int, List<Ogrenci>>();
+                siniflaraGoreOgrenciler = new Dictionary<int, List<Ogrenci2>>();
                 for (int i = 1; i <= 4; i++) // Hata durumunda da sınıfları doldur
                 {
-                    siniflaraGoreOgrenciler.Add(i, new List<Ogrenci>());
+                    siniflaraGoreOgrenciler.Add(i, new List<Ogrenci2>());
                 }
             }
         }
         else
         {
-            siniflaraGoreOgrenciler = new Dictionary<int, List<Ogrenci>>();
+            siniflaraGoreOgrenciler = new Dictionary<int, List<Ogrenci2>>();
             for (int i = 1; i <= 4; i++) // Dosya yoksa da sınıfları doldur
             {
-                siniflaraGoreOgrenciler.Add(i, new List<Ogrenci>());
+                siniflaraGoreOgrenciler.Add(i, new List<Ogrenci2>());
             }
+
+
             Console.WriteLine("student.json dosyası bulunamadı. Yeni bir öğrenci listesi oluşturulacak.");
         }
     }
-
-
     static char SecimAl()
     {
         char secim;
@@ -280,10 +413,10 @@ class Program
 
         if (!siniflaraGoreOgrenciler.ContainsKey(secilenSinif))
         {
-            siniflaraGoreOgrenciler[secilenSinif] = new List<Ogrenci>();
+            siniflaraGoreOgrenciler[secilenSinif] = new List<Ogrenci2>();
         }
 
-        List<Ogrenci> oSinifOgrencileri = siniflaraGoreOgrenciler[secilenSinif];
+        List<Ogrenci2> oSinifOgrencileri = siniflaraGoreOgrenciler[secilenSinif];
 
         void Listele()
         {
@@ -332,15 +465,23 @@ class Program
                 continue;
             }
 
-            oSinifOgrencileri.Add(new Ogrenci
+            Ogrenci2 yeni = new Ogrenci2
             {
                 Numara = ogrenciNoSayaci++,
                 AdSoyad = tamAd,
                 Sinif = secilenSinif,
                 Dersler = new List<Ders>()
-            });
+            };
+
+            oSinifOgrencileri.Add(yeni);
+            yeniEklenenOgrenciler.Add(yeni); // ✅ sadece yeni eklenenler bu listeye
+
 
             Console.WriteLine("Öğrenci No: " + (ogrenciNoSayaci - 1) + " olarak eklendi.");
+
+            YeniEklenenleriJsonaKaydet(); // ✅ sadece yenileri kaydeden fonksiyon
+            OgrencileriKaydet(); // bu kalabilir
+
 
             if (i % 5 == 0 && i != adet)
             {
@@ -349,10 +490,7 @@ class Program
                 Console.Clear();
             }
         }
-
-        OgrencileriKaydet();
     }
-
 
     static int NotAl(string mesaj)
     {
@@ -399,132 +537,178 @@ class Program
         }
     }
 
-    static void NotGir()
+
+    static void DersTanimiEkle()
     {
-        int secilenSinif = 0;
+        List<Class> mevcutDersler = new List<Class>();
 
-        while (secilenSinif < 1 || secilenSinif > 4)
+        // classes.json dosyasını oku
+        if (File.Exists(classesDosyaYolu))
         {
-            secilenSinif = SayiAl("Hangi sınıf öğrencilerinin notları girilecek? (1-4): ");
-            if (secilenSinif < 1 || secilenSinif > 4)
-            {
-                Console.WriteLine("Lütfen 1 ile 4 arasında geçerli bir sınıf numarası girin.");
-            }
+            string json = File.ReadAllText(classesDosyaYolu);
+            mevcutDersler = JsonSerializer.Deserialize<List<Class>>(json);
         }
 
-        if (!siniflaraGoreOgrenciler.ContainsKey(secilenSinif) || siniflaraGoreOgrenciler[secilenSinif].Count == 0)
+        Console.Write("Ders Adı: ");
+        string className = Console.ReadLine()?.Trim();
+
+        if (string.IsNullOrEmpty(className))
         {
-            Console.WriteLine($"Seçilen {secilenSinif}. sınıfta henüz öğrenci bulunmamaktadır.");
+            Console.WriteLine("Ders adı boş olamaz.");
             return;
         }
 
-        var benzersizSinifDersleri = siniflaraGoreOgrenciler[secilenSinif]
-            .SelectMany(o => o.Dersler)
-            .GroupBy(d => d.DersAdi, StringComparer.OrdinalIgnoreCase)
-            .Select(g => g.First())
-            .Select(d => new { d.DersAdi, d.VizeYuzde, d.FinalYuzde }) 
-            .ToList();
-
-        if (!benzersizSinifDersleri.Any())
+        int classLevel = SayiAl("Sınıf Seviyesi (1-4): ");
+        if (classLevel < 1 || classLevel > 4)
         {
-            Console.WriteLine($"Seçilen {secilenSinif}. sınıfta tanımlanmış ders bulunmamaktadır. Lütfen önce ders tanımlayınız.");
+            Console.WriteLine("Geçersiz sınıf seviyesi!");
             return;
         }
 
-        Console.WriteLine("\n--- Mevcut Dersler ---");
-        for (int i = 0; i < benzersizSinifDersleri.Count; i++)
+        // ID belirle
+        int yeniId = mevcutDersler.Any() ? mevcutDersler.Max(d => d.classId) + 1 : 1;
+
+        Class yeniDers = new Class
         {
-            Console.WriteLine($"{i + 1}. {benzersizSinifDersleri[i].DersAdi} (Vize: {benzersizSinifDersleri[i].VizeYuzde}%, Final: {benzersizSinifDersleri[i].FinalYuzde}%)");
-        }
-        Console.WriteLine("----------------------");
+            classId = yeniId,
+            className = className,
+            classLevel = classLevel
+        };
 
-        int dersSecimSiraNo = 0;
-        while (dersSecimSiraNo < 1 || dersSecimSiraNo > benzersizSinifDersleri.Count)
-        {
-            dersSecimSiraNo = SayiAl("Notlarını gireceğiniz dersin sıra numarasını girin: ");
-            if (dersSecimSiraNo < 1 || dersSecimSiraNo > benzersizSinifDersleri.Count)
-            {
-                Console.WriteLine("Geçersiz ders sıra numarası. Lütfen tekrar deneyin.");
-            }
-        }
+        mevcutDersler.Add(yeniDers);
 
-        var secilenDersBilgisi = benzersizSinifDersleri[dersSecimSiraNo - 1];
-        string secilenDersAdi = secilenDersBilgisi.DersAdi;
-        double secilenDersVizeYuzde = secilenDersBilgisi.VizeYuzde;
-        double secilenDersFinalYuzde = secilenDersBilgisi.FinalYuzde;
+            string yeniJson = JsonSerializer.Serialize(mevcutDersler, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText(classesDosyaYolu, yeniJson);
 
-
-        Console.WriteLine($"\n'{secilenDersAdi}' dersi için not girişi yapılacak öğrenciler:");
-
-        var sinifOgrencileri = siniflaraGoreOgrenciler[secilenSinif].OrderBy(o => o.Numara).ToList();
-
-        if (!sinifOgrencileri.Any())
-        {
-            Console.WriteLine("Bu sınıfta hiç öğrenci bulunmamaktadır.");
-            return;
-        }
-
-        Console.WriteLine("\n--- Öğrenci Listesi ---");
-        foreach (var ogr in sinifOgrencileri)
-        {
-            var mevcutDers = ogr.Dersler.FirstOrDefault(d => d.DersAdi.Equals(secilenDersAdi, StringComparison.OrdinalIgnoreCase));
-            string mevcutNotDurumu = mevcutDers != null ? $" (Mevcut: Vize:{mevcutDers.Vize}, Final:{mevcutDers.Final})" : "";
-            Console.WriteLine($"No: {ogr.Numara}, Adı Soyadı: {ogr.AdSoyad}{mevcutNotDurumu}");
-        }
-        Console.WriteLine("----------------------");
-
-        while (true)
-        {
-            int ogrenciNumarasi = SayiAl("Not girmek istediğiniz öğrencinin okul numarasını girin (Bitirmek için 0): ");
-
-            if (ogrenciNumarasi == 0)
-            {
-                break; 
-            }
-
-            var hedefOgrenci = sinifOgrencileri.FirstOrDefault(o => o.Numara == ogrenciNumarasi);
-
-            if (hedefOgrenci == null)
-            {
-                Console.WriteLine("Belirtilen numarada öğrenci bulunamadı. Lütfen tekrar deneyin.");
-                continue;
-            }
-
-            Console.WriteLine($"\n{hedefOgrenci.AdSoyad} (No: {hedefOgrenci.Numara}) öğrencisi için '{secilenDersAdi}' dersi notları:");
-
-            var mevcutDers = hedefOgrenci.Dersler.FirstOrDefault(d => d.DersAdi.Equals(secilenDersAdi, StringComparison.OrdinalIgnoreCase));
-
-            if (mevcutDers == null)
-            {
-                Console.WriteLine("Bu öğrenciye yeni ders notu ekleniyor.");
-                int vize = NotAl("Vize notunu girin (0-100): ");
-                int final = NotAl("Final notunu girin (0-100): ");
-
-                hedefOgrenci.Dersler.Add(new Ders
-                {
-                    DersAdi = secilenDersAdi,
-                    Vize = vize,
-                    Final = final,
-                    VizeYuzde = secilenDersVizeYuzde, 
-                    FinalYuzde = secilenDersFinalYuzde 
-                });
-            }
-            else
-            {
-                Console.WriteLine($"Mevcut Notlar: Vize:{mevcutDers.Vize}, Final:{mevcutDers.Final}");
-                int yeniVize = NotAl("Yeni vize notunu girin (0-100): ");
-                int yeniFinal = NotAl("Yeni final notunu girin (0-100): ");
-
-                mevcutDers.Vize = yeniVize;
-                mevcutDers.Final = yeniFinal;
-                Console.WriteLine("Notlar başarıyla güncellendi.");
-            }
-        }
-
-        Console.WriteLine("\nTüm not girişleri başarıyla tamamlandı.");
-        OgrencileriKaydet(); 
+            Console.WriteLine($"'{className}' dersi başarıyla eklendi.");
     }
 
+    static void NotGir()
+        {
+            int secilenSinif = 0;
+
+            while (secilenSinif < 1 || secilenSinif > 4)
+            {
+                secilenSinif = SayiAl("Hangi sınıf öğrencilerinin notları girilecek? (1-4): ");
+                if (secilenSinif < 1 || secilenSinif > 4)
+                {
+                    Console.WriteLine("Lütfen 1 ile 4 arasında geçerli bir sınıf numarası girin.");
+                }
+            }
+
+            if (!siniflaraGoreOgrenciler.ContainsKey(secilenSinif) || siniflaraGoreOgrenciler[secilenSinif].Count == 0)
+            {
+                Console.WriteLine($"Seçilen {secilenSinif}. sınıfta henüz öğrenci bulunmamaktadır.");
+                return;
+            }
+        
+            var benzersizSinifDersleri = siniflaraGoreOgrenciler[secilenSinif]
+                .Where(o => o.Dersler != null) // Sadece Dersler özelliği null olmayan öğrencileri dahil et
+                .SelectMany(o => o.Dersler)
+                .GroupBy(o => o.DersAdi, StringComparer.OrdinalIgnoreCase)
+                .Select(g => g.First())
+                .Select(d => new { d.DersAdi, d.VizeYuzde, d.FinalYuzde })
+                .ToList();
+
+            if (!benzersizSinifDersleri.Any())
+            {
+                Console.WriteLine($"Seçilen {secilenSinif}. sınıfta tanımlanmış ders bulunmamaktadır. Lütfen önce ders tanımlayınız.");
+                return;
+            }
+
+            Console.WriteLine("\n--- Mevcut Dersler ---");
+            for (int i = 0; i < benzersizSinifDersleri.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}. {benzersizSinifDersleri[i].DersAdi} (Vize: {benzersizSinifDersleri[i].VizeYuzde}%, Final: {benzersizSinifDersleri[i].FinalYuzde}%)");
+            }
+            Console.WriteLine("----------------------");
+
+            int dersSecimSiraNo = 0;
+            while (dersSecimSiraNo < 1 || dersSecimSiraNo > benzersizSinifDersleri.Count)
+            {
+                dersSecimSiraNo = SayiAl("Notlarını gireceğiniz dersin sıra numarasını girin: ");
+                if (dersSecimSiraNo < 1 || dersSecimSiraNo > benzersizSinifDersleri.Count)
+                {
+                    Console.WriteLine("Geçersiz ders sıra numarası. Lütfen tekrar deneyin.");
+                }
+            }
+
+            var secilenDersBilgisi = benzersizSinifDersleri[dersSecimSiraNo - 1];
+            string secilenDersAdi = secilenDersBilgisi.DersAdi;
+            double secilenDersVizeYuzde = secilenDersBilgisi.VizeYuzde;
+            double secilenDersFinalYuzde = secilenDersBilgisi.FinalYuzde;
+
+
+            Console.WriteLine($"\n'{secilenDersAdi}' dersi için not girişi yapılacak öğrenciler:");
+
+            var sinifOgrencileri = siniflaraGoreOgrenciler[secilenSinif].OrderBy(o => o.Numara).ToList();
+
+            if (!sinifOgrencileri.Any())
+            {
+                Console.WriteLine("Bu sınıfta hiç öğrenci bulunmamaktadır.");
+                return;
+            }
+
+            Console.WriteLine("\n--- Öğrenci Listesi ---");
+            foreach (var ogr in sinifOgrencileri)
+            {
+                var mevcutDers = ogr.Dersler.FirstOrDefault(d => d.DersAdi.Equals(secilenDersAdi, StringComparison.OrdinalIgnoreCase));
+                string mevcutNotDurumu = mevcutDers != null ? $" (Mevcut: Vize:{mevcutDers.Vize}, Final:{mevcutDers.Final})" : "";
+                Console.WriteLine($"No: {ogr.Numara}, Adı Soyadı: {ogr.AdSoyad}{mevcutNotDurumu}");
+            }
+            Console.WriteLine("----------------------");
+
+            while (true)
+            {
+                int ogrenciNumarasi = SayiAl("Not girmek istediğiniz öğrencinin okul numarasını girin (Bitirmek için 0): ");
+
+                if (ogrenciNumarasi == 0)
+                {
+                    break; 
+                }
+
+                var hedefOgrenci = sinifOgrencileri.FirstOrDefault(o => o.Numara == ogrenciNumarasi);
+
+                if (hedefOgrenci == null)
+                {
+                    Console.WriteLine("Belirtilen numarada öğrenci bulunamadı. Lütfen tekrar deneyin.");
+                    continue;
+                }
+
+                Console.WriteLine($"\n{hedefOgrenci.AdSoyad} (No: {hedefOgrenci.Numara}) öğrencisi için '{secilenDersAdi}' dersi notları:");
+
+                var mevcutDers = hedefOgrenci.Dersler.FirstOrDefault(d => d.DersAdi.Equals(secilenDersAdi, StringComparison.OrdinalIgnoreCase));
+
+                if (mevcutDers == null)
+                {
+                    Console.WriteLine("Bu öğrenciye yeni ders notu ekleniyor.");
+                    int vize = NotAl("Vize notunu girin (0-100): ");
+                    int final = NotAl("Final notunu girin (0-100): ");
+
+                    hedefOgrenci.Dersler.Add(new Ders
+                    {
+                        DersAdi = secilenDersAdi,
+                        Vize = vize,
+                        Final = final,
+                        VizeYuzde = secilenDersVizeYuzde, 
+                        FinalYuzde = secilenDersFinalYuzde 
+                    });
+                }
+                else
+                {
+                    Console.WriteLine($"Mevcut Notlar: Vize:{mevcutDers.Vize}, Final:{mevcutDers.Final}");
+                    int yeniVize = NotAl("Yeni vize notunu girin (0-100): ");
+                    int yeniFinal = NotAl("Yeni final notunu girin (0-100): ");
+
+                    mevcutDers.Vize = yeniVize;
+                    mevcutDers.Final = yeniFinal;
+                    Console.WriteLine("Notlar başarıyla güncellendi.");
+                }
+            }
+
+            Console.WriteLine("\nTüm not girişleri başarıyla tamamlandı.");
+            OgrencileriKaydet(); 
+        }
 
     static void OrtalamaHesapla()
     {
@@ -539,11 +723,12 @@ class Program
         foreach (var sinifKvp in siniflaraGoreOgrenciler)
         {
             int sinifNo = sinifKvp.Key;
-            List<Ogrenci> ogrenciler = sinifKvp.Value;
+            List<Ogrenci2> ogrenciler = sinifKvp.Value;
 
-            if (ogrenciler.Any(o => o.Dersler.Any()))
+            if (ogrenciler.Any(o => o.Dersler != null && o.Dersler.Any()))
             {
-                double sinifGenelOrtalama = ogrenciler.Average(o => o.Ortalama);
+                var notuOlanlar = ogrenciler.Where(o => o.Dersler != null && o.Dersler.Any());
+                double sinifGenelOrtalama = notuOlanlar.Average(o => o.Ortalama);
                 Console.WriteLine($"\n{sinifNo}. Sınıf Genel Ortalaması: {sinifGenelOrtalama:F2}");
             }
             else
@@ -653,8 +838,8 @@ class Program
         }
 
         var ogrenciler = siniflaraGoreOgrenciler[sinif];
-
         var dersAdlari = ogrenciler
+            .Where(o => o.Dersler != null) 
             .SelectMany(o => o.Dersler)
             .Select(d => d.DersAdi)
             .Distinct()
@@ -694,7 +879,7 @@ class Program
         }
         Console.WriteLine("--------------------------");
 
-        Ogrenci hedefOgrenci = null;
+        Ogrenci2 hedefOgrenci = null;
         int ogrenciNoToEdit;
 
         while (hedefOgrenci == null)
@@ -715,6 +900,14 @@ class Program
             }
         }
 
+        
+        if (hedefOgrenci.Dersler == null)
+        {
+            Console.WriteLine($"Öğrenci {hedefOgrenci.AdSoyad} için hiç ders kaydı bulunamadı.");
+            Console.WriteLine("Bu öğrenciye not eklemek isterseniz 'Not Gir' menüsünü kullanın.");
+            return; 
+        }
+
         var ders = hedefOgrenci.Dersler.FirstOrDefault(d => d.DersAdi.Equals(secilenDersAdi, StringComparison.OrdinalIgnoreCase));
 
         if (ders != null)
@@ -728,7 +921,7 @@ class Program
 
             ders.Vize = yeniVize;
             ders.Final = yeniFinal;
-            
+
             Console.WriteLine($"{secilenDersAdi} dersi güncellendi. Ortalama: {ders.Ortalama:F2}");
         }
         else
@@ -736,8 +929,72 @@ class Program
             Console.WriteLine($"\n{hedefOgrenci.AdSoyad} öğrencisinde '{secilenDersAdi}' dersi bulunamadı. Belki yanlış dersi seçtiniz veya öğrenci bu dersi almıyor.");
             Console.WriteLine("Bu derse not eklemek isterseniz 'Not Gir' menüsünü kullanın.");
         }
-
-        Console.WriteLine("\nNot başarıyla güncellendi.");
-        OgrencileriKaydet();
     }
+
+
+    static void OgrenciDersleriniListele()
+    {
+        int ogrNo = SayiAl("Öğrenci numarasını girin: ");
+
+        // Öğrencileri yükle
+        List<Ogrenci> tumOgrenciler = new List<Ogrenci>();
+        if (File.Exists(dosyaYolu))
+        {
+            string json = File.ReadAllText(dosyaYolu);
+            tumOgrenciler = JsonSerializer.Deserialize<List<Ogrenci>>(json);
+        }
+
+        var hedefOgrenci = tumOgrenciler.FirstOrDefault(o => o.Numara == ogrNo);
+
+        if (hedefOgrenci == null)
+        {
+            Console.WriteLine("Bu numaraya sahip öğrenci bulunamadı.");
+            return;
+        }
+
+        // Dersleri yükle
+        Dictionary<string, List<Ders2>> dersVerileri = new Dictionary<string, List<Ders2>>();
+        if (File.Exists(dersDosyaYolu))
+        {
+            string json = File.ReadAllText(dersDosyaYolu);
+            dersVerileri = JsonSerializer.Deserialize<Dictionary<string, List<Ders2>>>(json);
+        }
+
+        // Sınıfları yükle
+        List<ClassInfo> siniflar = new List<ClassInfo>();
+        if (File.Exists(classesDosyaYolu))
+        {
+            string json = File.ReadAllText(classesDosyaYolu);
+            siniflar = JsonSerializer.Deserialize<List<ClassInfo>>(json);
+        }
+
+        Console.WriteLine($"\nÖğrenci Bilgileri:");
+        Console.WriteLine($"Ad Soyad : {hedefOgrenci.AdSoyad}");
+        Console.WriteLine($"Numara   : {hedefOgrenci.Numara}");
+        Console.WriteLine($"Sınıf    : {hedefOgrenci.Sinif}");
+        Console.WriteLine(new string('-', 40));
+
+        if (dersVerileri.ContainsKey(ogrNo.ToString()) && dersVerileri[ogrNo.ToString()].Any())
+        {
+            Console.WriteLine("Aldığı Dersler:");
+            Console.WriteLine("{0,-25} {1,5} {2,5} {3,10} {4,10} {5,10}", "Ders Adı", "Vize", "Final", "Ortalama", "Harf Notu", "Durum");
+
+            foreach (var ders in dersVerileri[ogrNo.ToString()])
+            {
+                var dersBilgisi = siniflar.FirstOrDefault(s => s.classId == ders.classId);
+                string dersAdi = dersBilgisi != null ? dersBilgisi.className : "Bilinmeyen Ders";
+
+                // Burada da 6 sütun için format belirtici ekledim
+                Console.WriteLine("{0,-25} {1,5} {2,5} {3,10:F2} {4,10} {5,10}",
+                    dersAdi, ders.Vize, ders.Final, ders.Ortalama, ders.HarfNotu, ders.Durum);
+            }
+
+        }
+        else
+        {
+            Console.WriteLine("Bu öğrenciye ait ders bulunamadı.");
+        }
+    }
+
+
 }

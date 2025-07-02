@@ -1,2389 +1,399 @@
-{
-  "1": [
+﻿[
     {
       "Numara": 10001,
       "AdSoyad": "Elif Demir",
-      "Sinif": 1,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 1
     },
     {
       "Numara": 10002,
       "AdSoyad": "Mehmet Kaya",
-      "Sinif": 1,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 1
     },
     {
       "Numara": 10003,
-      "AdSoyad": "Zeynep \u015Eahin",
-      "Sinif": 1,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Zeynep Şahin",
+      "Sinif": 1
     },
     {
       "Numara": 10004,
-      "AdSoyad": "Can Ayd\u0131n",
-      "Sinif": 1,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Can Aydın",
+      "Sinif": 1
     },
     {
       "Numara": 10005,
-      "AdSoyad": "Seda \u00C7elik",
-      "Sinif": 1,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Seda Çelik",
+      "Sinif": 1
     },
     {
       "Numara": 10006,
       "AdSoyad": "Emre Korkmaz",
-      "Sinif": 1,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 1
     },
     {
       "Numara": 10007,
       "AdSoyad": "Derya Arslan",
-      "Sinif": 1,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 1
     },
     {
       "Numara": 10008,
-      "AdSoyad": "Kerem Y\u0131ld\u0131z",
-      "Sinif": 1,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Kerem Yıldız",
+      "Sinif": 1
     },
     {
       "Numara": 10009,
-      "AdSoyad": "Ay\u015Fe Bulut",
-      "Sinif": 1,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Ayşe Bulut",
+      "Sinif": 1
     },
     {
       "Numara": 10010,
-      "AdSoyad": "Murat \u00D6zkan",
-      "Sinif": 1,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Murat Özkan",
+      "Sinif": 1
     },
     {
       "Numara": 10011,
-      "AdSoyad": "Fatma \u00D6zt\u00FCrk",
-      "Sinif": 1,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Fatma Öztürk",
+      "Sinif": 1
     },
     {
       "Numara": 10012,
       "AdSoyad": "Ali Polat",
-      "Sinif": 1,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 1
     },
     {
       "Numara": 10013,
-      "AdSoyad": "B\u00FC\u015Fra Ko\u00E7",
-      "Sinif": 1,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Büşra Koç",
+      "Sinif": 1
     },
     {
       "Numara": 10014,
-      "AdSoyad": "Serkan Ta\u015F",
-      "Sinif": 1,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Serkan Taş",
+      "Sinif": 1
     },
     {
       "Numara": 10015,
-      "AdSoyad": "Nazl\u0131 Kurt",
-      "Sinif": 1,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Nazlı Kurt",
+      "Sinif": 1
     },
     {
       "Numara": 10016,
       "AdSoyad": "Hakan Erdem",
-      "Sinif": 1,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 1
     },
     {
       "Numara": 10017,
-      "AdSoyad": "Selin Yal\u00E7\u0131n",
-      "Sinif": 1,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Selin Yalçın",
+      "Sinif": 1
     },
     {
       "Numara": 10018,
-      "AdSoyad": "Okan G\u00FCne\u015F",
-      "Sinif": 1,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Okan Güneş",
+      "Sinif": 1
     },
     {
       "Numara": 10019,
       "AdSoyad": "Ebru Deniz",
-      "Sinif": 1,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "Sinif": 1
     },
     {
-      "Numara": 10080,
-      "AdSoyad": "Burak \u00D6vence",
-      "Sinif": 1,
-      "Dersler": [],
-      "Ortalama": 0,
-      "GectiMi": false,
-      "HarfNotu": "FF"
-    }
-  ],
-  "2": [
-    {
       "Numara": 10020,
-      "AdSoyad": "Burak K\u0131l\u0131\u00E7",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "AdSoyad": "Burak Kılıç",
+      "Sinif": 2
     },
     {
       "Numara": 10021,
       "AdSoyad": "Merve Acar",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "Sinif": 2
     },
     {
       "Numara": 10022,
-      "AdSoyad": "Fatih Y\u0131lmaz",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "AdSoyad": "Fatih Yılmaz",
+      "Sinif": 2
     },
     {
       "Numara": 10023,
-      "AdSoyad": "G\u00FCl\u015Fah Ko\u00E7",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "AdSoyad": "Gülşah Koç",
+      "Sinif": 2
     },
     {
       "Numara": 10024,
       "AdSoyad": "Yusuf Arslan",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "Sinif": 2
     },
     {
       "Numara": 10025,
-      "AdSoyad": "Dilan \u00D6zdemir",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "AdSoyad": "Dilan Özdemir",
+      "Sinif": 2
     },
     {
       "Numara": 10026,
-      "AdSoyad": "Erdem \u00C7elik",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "AdSoyad": "Erdem Çelik",
+      "Sinif": 2
     },
     {
       "Numara": 10027,
       "AdSoyad": "Sibel Korkmaz",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "Sinif": 2
     },
     {
       "Numara": 10028,
       "AdSoyad": "Emine Kaya",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "Sinif": 2
     },
     {
       "Numara": 10029,
       "AdSoyad": "Ahmet Bulut",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "Sinif": 2
     },
     {
       "Numara": 10030,
-      "AdSoyad": "Sevda Y\u0131ld\u0131r\u0131m",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "AdSoyad": "Sevda Yıldırım",
+      "Sinif": 2
     },
     {
       "Numara": 10031,
-      "AdSoyad": "O\u011Fuzhan Demir",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "AdSoyad": "Oğuzhan Demir",
+      "Sinif": 2
     },
     {
       "Numara": 10032,
-      "AdSoyad": "Pelin \u015Een",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "AdSoyad": "Pelin Şen",
+      "Sinif": 2
     },
     {
       "Numara": 10033,
-      "AdSoyad": "Serhat \u00D6zkan",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "AdSoyad": "Serhat Özkan",
+      "Sinif": 2
     },
     {
       "Numara": 10034,
-      "AdSoyad": "Nazl\u0131 Erdem",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "AdSoyad": "Nazlı Erdem",
+      "Sinif": 2
     },
     {
       "Numara": 10035,
-      "AdSoyad": "\u0130smail Kurt",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "AdSoyad": "İsmail Kurt",
+      "Sinif": 2
     },
     {
       "Numara": 10036,
-      "AdSoyad": "Ece Ta\u015F",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "AdSoyad": "Ece Taş",
+      "Sinif": 2
     },
     {
       "Numara": 10037,
-      "AdSoyad": "Tuna Yal\u00E7\u0131n",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "AdSoyad": "Tuna Yalçın",
+      "Sinif": 2
     },
     {
       "Numara": 10038,
-      "AdSoyad": "Asl\u0131 G\u00FCne\u015F",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
+      "AdSoyad": "Aslı Güneş",
+      "Sinif": 2
     },
     {
       "Numara": 10039,
-      "AdSoyad": "\u00D6zlem Deniz",
-      "Sinif": 2,
-      "Dersler": [
-        {
-          "DersAdi": "A\u011F Temelleri",
-          "Vize": 51,
-          "Final": 63,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 58.2,
-          "HarfNotu": "FD",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "G\u00F6rsel Programlama",
-          "Vize": 95,
-          "Final": 94,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 94.4,
-          "HarfNotu": "AA",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 76.30000000000001,
-      "GectiMi": true,
-      "HarfNotu": "CB"
-    }
-  ],
-  "3": [
+      "AdSoyad": "Özlem Deniz",
+      "Sinif": 2
+    },
     {
       "Numara": 10040,
-      "AdSoyad": "H\u00FCseyin K\u0131l\u0131\u00E7",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Hüseyin Kılıç",
+      "Sinif": 3
     },
     {
       "Numara": 10041,
       "AdSoyad": "Derya Acar",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 3
     },
     {
       "Numara": 10042,
-      "AdSoyad": "Engin Y\u0131lmaz",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Engin Yılmaz",
+      "Sinif": 3
     },
     {
       "Numara": 10043,
-      "AdSoyad": "\u015Eeyma Ko\u00E7",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Şeyma Koç",
+      "Sinif": 3
     },
     {
       "Numara": 10044,
       "AdSoyad": "Umut Arslan",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 3
     },
     {
       "Numara": 10045,
-      "AdSoyad": "Seda \u00D6zdemir",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Seda Özdemir",
+      "Sinif": 3
     },
     {
       "Numara": 10046,
-      "AdSoyad": "Emir \u00C7elik",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Emir Çelik",
+      "Sinif": 3
     },
     {
       "Numara": 10047,
       "AdSoyad": "Nazan Korkmaz",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 3
     },
     {
       "Numara": 10048,
       "AdSoyad": "Sinem Kaya",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 3
     },
     {
       "Numara": 10049,
       "AdSoyad": "Ahmet Bulut",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 3
     },
     {
       "Numara": 10050,
-      "AdSoyad": "Meryem Y\u0131ld\u0131r\u0131m",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Meryem Yıldırım",
+      "Sinif": 3
     },
     {
       "Numara": 10051,
       "AdSoyad": "Volkan Demir",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 3
     },
     {
       "Numara": 10052,
-      "AdSoyad": "Zehra \u015Een",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Zehra Şen",
+      "Sinif": 3
     },
     {
       "Numara": 10053,
-      "AdSoyad": "Mustafa \u00D6zkan",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Mustafa Özkan",
+      "Sinif": 3
     },
     {
       "Numara": 10054,
       "AdSoyad": "Elif Erdem",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 3
     },
     {
       "Numara": 10055,
       "AdSoyad": "Ali Kurt",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 3
     },
     {
       "Numara": 10056,
-      "AdSoyad": "Hakan Ta\u015F",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Hakan Taş",
+      "Sinif": 3
     },
     {
       "Numara": 10057,
-      "AdSoyad": "Asl\u0131 Yal\u00E7\u0131n",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Aslı Yalçın",
+      "Sinif": 3
     },
     {
       "Numara": 10058,
-      "AdSoyad": "Okan G\u00FCne\u015F",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Okan Güneş",
+      "Sinif": 3
     },
     {
       "Numara": 10059,
       "AdSoyad": "Elif Deniz",
-      "Sinif": 3,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
-    }
-  ],
-  "4": [
+      "Sinif": 3
+    },
     {
       "Numara": 10060,
-      "AdSoyad": "Ahmet K\u0131l\u0131\u00E7",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Ahmet Kılıç",
+      "Sinif": 4
     },
     {
       "Numara": 10061,
       "AdSoyad": "Fatma Acar",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 4
     },
     {
       "Numara": 10062,
-      "AdSoyad": "Mehmet Y\u0131lmaz",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Mehmet Yılmaz",
+      "Sinif": 4
     },
     {
       "Numara": 10063,
-      "AdSoyad": "Zeynep Ko\u00E7",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Zeynep Koç",
+      "Sinif": 4
     },
     {
       "Numara": 10064,
       "AdSoyad": "Can Arslan",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 4
     },
     {
       "Numara": 10065,
-      "AdSoyad": "Seda \u00D6zdemir",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Seda Özdemir",
+      "Sinif": 4
     },
     {
       "Numara": 10066,
-      "AdSoyad": "Emre \u00C7elik",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Emre Çelik",
+      "Sinif": 4
     },
     {
       "Numara": 10067,
       "AdSoyad": "Derya Korkmaz",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 4
     },
     {
       "Numara": 10068,
       "AdSoyad": "Kerem Kaya",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 4
     },
     {
       "Numara": 10069,
-      "AdSoyad": "Ay\u015Fe Bulut",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Ayşe Bulut",
+      "Sinif": 4
     },
     {
       "Numara": 10070,
-      "AdSoyad": "Murat Y\u0131ld\u0131r\u0131m",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Murat Yıldırım",
+      "Sinif": 4
     },
     {
       "Numara": 10071,
       "AdSoyad": "Fatma Demir",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 4
     },
     {
       "Numara": 10072,
-      "AdSoyad": "Ali \u00D6zkan",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Ali Özkan",
+      "Sinif": 4
     },
     {
       "Numara": 10073,
-      "AdSoyad": "B\u00FC\u015Fra Erdem",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Büşra Erdem",
+      "Sinif": 4
     },
     {
       "Numara": 10074,
       "AdSoyad": "Serkan Kurt",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 4
     },
     {
       "Numara": 10075,
-      "AdSoyad": "Nazl\u0131 Ta\u015F",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Nazlı Taş",
+      "Sinif": 4
     },
     {
       "Numara": 10076,
-      "AdSoyad": "Hakan Yal\u00E7\u0131n",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Hakan Yalçın",
+      "Sinif": 4
     },
     {
       "Numara": 10077,
-      "AdSoyad": "Selin G\u00FCne\u015F",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "AdSoyad": "Selin Güneş",
+      "Sinif": 4
     },
     {
       "Numara": 10078,
       "AdSoyad": "Okan Deniz",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 4
     },
     {
       "Numara": 10079,
       "AdSoyad": "Ebru Acar",
-      "Sinif": 4,
-      "Dersler": [
-        {
-          "DersAdi": "Lojik Tasar\u0131m",
-          "Vize": 75,
-          "Final": 99,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 89.4,
-          "HarfNotu": "BA",
-          "Durum": "Ge\u00E7ti"
-        },
-        {
-          "DersAdi": "Web Tasar\u0131m\u0131 Temelleri",
-          "Vize": 40,
-          "Final": 96,
-          "VizeYuzde": 40,
-          "FinalYuzde": 60,
-          "Ortalama": 73.6,
-          "HarfNotu": "CC",
-          "Durum": "Ge\u00E7ti"
-        }
-      ],
-      "Ortalama": 81.5,
-      "GectiMi": true,
-      "HarfNotu": "BB"
+      "Sinif": 4
     }
   ]
-}
+    
+
